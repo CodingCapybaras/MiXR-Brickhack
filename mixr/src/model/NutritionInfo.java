@@ -13,10 +13,10 @@ public class NutritionInfo {
     //nutrition attributes
     private double calories;
     private double proof;
-    private ArrayList<String> ingredients= new ArrayList<String>();
+    private String[] ingredients;
 
     //NutritionInfo constructor 
-    public NutritionInfo(double calories, double proof, ArrayList<String> ingredients){ //ingredients is an array of strings 
+    public NutritionInfo(double calories, double proof, String[] ingredients){ //ingredients is an array of strings 
         this.calories=calories;
         this.proof = proof;
         this.ingredients = ingredients;
@@ -29,7 +29,7 @@ public class NutritionInfo {
     public double getProof() {
     return proof;
     }
-    public ArrayList<String> getIngredients() {
+    public String[] getIngredients() {
     return ingredients;
     }
 

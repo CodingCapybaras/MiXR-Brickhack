@@ -16,7 +16,7 @@ public class Beverage {
     private int id;
     private double cost;
     private double size; //in ounces
-    private ArrayList color;
+    private int[] color;
     private NutritionInfo nutrition;
 
     /**
@@ -36,7 +36,7 @@ public class Beverage {
      * @param color
      * @param nutrition
      */
-    public Beverage(String name, int id, double cost, double size, ArrayList<Integer> color, NutritionInfo nutrition){
+    public Beverage(String name, int id, double cost, double size, int[] color, NutritionInfo nutrition){
         this.name = name;
         this.id = id;
         this.cost = cost;
@@ -51,7 +51,7 @@ public class Beverage {
         return nutrition;
     }
 
-    public ArrayList<Integer>  getColor(){
+    public int[] getColor(){
         return color;
     }
 
