@@ -26,5 +26,9 @@ public class NutritionInfo {
     return ingredients;
     }
 
-
+    public static void main(String[] args) {
+        ArrayList yo= new ArrayList<String>(2);
+        NutritionInfo bob =new NutritionInfo(1, 10, yo);
+        System.out.println(bob.getProof()); // Print the value of x
+      }
 }
