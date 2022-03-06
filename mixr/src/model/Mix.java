@@ -11,12 +11,15 @@ public class Mix {
     private ArrayList<Beverage> beverages;
     private User user;
     HashMap<Integer, String> mixer = new HashMap<>();
+
     //need to calculate with Arraybeverages 
     private double proof;
-    private double totalCost;
+    private double totalCost =0;
     private ArrayList color;
     private NutritionInfo nutrition;
     private int likes; //rating
+    private double totalAlcohol=0;
+    private double totalSize=0;
 
 
     //Mix constructor 
@@ -26,6 +29,14 @@ public class Mix {
         this.id = id;
         this.beverages=beverages;
         this.user=user;
+
+        //Calculate the total cost,alcohol and amount of beverage(size)
+        for(Beverage bev: this.beverages){
+            this.totalCost+=(bev.getSize())*(bev.getCost()); 
+            this.totalAlcohol+=(bev.getSize())*(bev.getNutrition().getProof()/100); //total amount of alcohol in mixture
+            this.totalSize+=bev.getSize(); //total amount of liquid in mixture
+        }
+        proof=totalAlcohol/totalSize;
     }
 
 
@@ -34,8 +45,10 @@ public class Mix {
         double totalCalories=0;
         Set<String> set= new HashSet<String>();
         ArrayList<String> ing = new ArrayList<String>();
+        //nested for loop to get every single ingredient in every beverage
         for(Beverage bev: beverages){
-           totalCalories=bev.getNutrition().getCalories();
+            //increasing calories
+            totalCalories+=bev.getNutrition().getCalories()*bev.getSize();//calories per oz * oz
             for(String nutr: bev.getNutrition().getIngredients()) //gets the ingredients of each beverage
             { 
                 set.add(nutr);            
@@ -45,7 +58,7 @@ public class Mix {
         for(String ingred: set){
             ing.add(ingred);
         }
-
+        //setting mix's nutrition
         nutrition = new NutritionInfo(totalCalories, proof, ing);
         return nutrition;
     }
@@ -53,20 +66,16 @@ public class Mix {
     public ArrayList<Integer>  getColor(){
         return color;
     }
+    //caclulating alcohol percentage
     public double getProof(){
-        double totalAlcohol = 0;
-        double totalSize=0;
-        for(Beverage bev: beverages){
-            totalAlcohol+=(bev.getSize())*(bev.getNutrition().getProof()/100); //total amount of alcohol in mixture
-            totalSize+=bev.getSize(); //total amount of liquid in mixture
-        }
         proof = (totalAlcohol/totalSize);
         return proof;
     }
+    public User getUser(){
+        return user;
+    }
+    //calculating cost of drink
     public double getCost() {
-        for(Beverage bev: beverages){
-            totalCost+=(bev.getSize())*(bev.getCost()); //cost times size per oz
-        }
         return totalCost;
     }
     public int getId(){
@@ -84,9 +93,16 @@ public class Mix {
     public void decrementRating(){
         likes-=1;
     }
-    public void addBev(Beverage Bev){
-        beverages.add(Bev); //add Beverage to mix
+    public void addBev(Beverage bev){
+        //have to recalc mix after adding bev
+        beverages.add(bev); //add Beverage to mix
+        totalCost+=(bev.getSize())*(bev.getCost());
+        totalAlcohol+=(bev.getSize())*(bev.getNutrition().getProof()/100);
+        totalSize+=bev.getSize(); 
+        proof = (totalAlcohol/totalSize);
+
     }
+
     //public void addMixToDB(beverages)
 
     //Testing Mix class

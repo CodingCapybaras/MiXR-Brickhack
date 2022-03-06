@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-//Nutrition class
+//NutritionInfo class
 public class NutritionInfo {
 
     //nutrition attributes
