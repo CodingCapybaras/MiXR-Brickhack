@@ -16,4 +16,5 @@
 > Java, SQL, Figma, React, MongoDB.
 
 **UML for classes used in Development**
+> The model of our program is based around beverage and mix objects. Beverage objects are created when a beverage is obtained from the database through the Translastion.java. That beverage object can be used to make mixes of different beverages. When a mix is made, the user must specify one or more beverages that they wish to add to the mix with the relative amount. When a user creates a mix, a method called Translation.addMix(HashMap<int percent, Beverage>, int userID) will be added to the database. The mixes can be retrieved when a user is scrolling through a feed of mixes, or when a user views another users mixes.
 > ![uml](https://github.com/CodingCapybaras/MiXR/blob/main/diagrams/MiXR%20UML%20class%20diagram.jpeg)
