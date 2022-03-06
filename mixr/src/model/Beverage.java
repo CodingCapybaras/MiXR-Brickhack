@@ -70,6 +70,10 @@ public class Beverage {
         return name;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Name:\t%s \nColor:\t%s\nCost:\t%f\nSize:\t%f\nNutrition:\t%s\n", name, color.toString(),cost,size,nutrition.toString());
+    }
     //Testing Beverage class
 
     /*
