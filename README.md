@@ -2,7 +2,7 @@
 > ![MiXR logo](https://github.com/CodingCapybaras/MiXR/blob/main/diagrams/MiXR%20Logo.jpg)
 **About MiXR:**
 > 
-> MiXR is an application that promotes a space for sharing love of alcoholic beverages and the mixing of these beverages.
+### MiXR is an application that promotes a space for sharing love of alcoholic beverages and the mixing of these beverages.
 
 **How to Use MiXR:**
 > In order to run MiXR on your local machine, you must have the node package manager installed. 
