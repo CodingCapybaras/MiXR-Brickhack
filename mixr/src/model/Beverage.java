@@ -8,6 +8,7 @@ public class Beverage {
     private String name;
     private int id;
     private double cost;
+    private double size; //in ounces
     private ArrayList color;
     private NutritionInfo nutrition;
 
@@ -15,10 +16,11 @@ public class Beverage {
         this.id=id;
     }
     //Beverage constructor 
-    public Beverage(String name, int id, double cost, ArrayList<Integer> color, NutritionInfo nutrition){
+    public Beverage(String name, int id, double cost, double size, ArrayList<Integer> color, NutritionInfo nutrition){
         this.name = name;
         this.id = id;
         this.cost = cost;
+        this.size = size;
         this.color = color;
         this.nutrition=nutrition;
     }
@@ -34,6 +36,10 @@ public class Beverage {
     public double getCost() {
     return cost;
     }
+    public double getSize(){
+        return size;
+    }
+
     public int getId(){
         return id;
     }
