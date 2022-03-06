@@ -72,7 +72,12 @@ public class Beverage {
 
     @Override
     public String toString() {
-        return String.format("Name:\t%s \nColor:\t%s\nCost:\t%f\nSize:\t%f\nNutrition:\t%s\n", name, color.toString(),cost,size,nutrition.toString());
+        return String.format("\nName:\t%s \n\tColor:\t%s\n\tCost:\t%f\n\tSize:\t%f\n\tNutrition:\t%s\n", name, color.toString(),cost,size,nutrition.toString());
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
     }
     //Testing Beverage class
 

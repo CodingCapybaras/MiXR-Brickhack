@@ -17,7 +17,7 @@ public class Mix {
     private int id;
     private ArrayList<Beverage> beverages;
     private User user;
-    HashMap<Integer, String> mixer = new HashMap<>();
+    HashMap<Integer, Beverage> mixer = new HashMap<>();
 
     //need to calculate with Arraybeverages 
     private double proof;
@@ -27,22 +27,24 @@ public class Mix {
     private int likes; //rating
     private double totalAlcohol=0;
     private double totalSize=0;
+    private HashMap<Double, Beverage> composition = new HashMap<>();
 
 
     /**
      * The constructor for a mix with a name, the mixer image, beverages, user.
      * @param name
-     * @param mixer
+     * @param mixer key=oz int value=Beverage
      * @param id
      * @param beverages
      * @param user
      */
-    public Mix(String name, HashMap<Integer, String> mixer, int id, ArrayList<Beverage> beverages, User user){
+    public Mix(String name, HashMap<Integer, Beverage> mixer, int id, ArrayList<Beverage> beverages, User user, HashMap<Double,Beverage> composition){
         this.name = name;
         this.mixer=mixer;
         this.id = id;
         this.beverages=beverages;
         this.user=user;
+        this.composition = composition;
 
         //Calculate the total cost,alcohol and amount of beverage(size)
         for(Beverage bev: this.beverages){
@@ -122,6 +124,11 @@ public class Mix {
         totalSize+=bev.getSize(); 
         proof = (totalAlcohol/totalSize);
 
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Mix Name:\t%s\n\tComposition:\t%s", name, composition.toString());
     }
 
     //public void addMixToDB(beverages)

@@ -35,7 +35,7 @@ public class NutritionInfo {
 
     @Override
     public String toString() {
-        return String.format("\n\tCalories:\t%f\n\tProof:\t%f\n\tIngredients:\t%s", calories, proof, ingredients.toString());
+        return String.format("\n\t\tCalories:\t%f\n\t\tProof:\t%f\n\t\tIngredients:\t%s", calories, proof, ingredients.toString());
     }
 
     //Beverage tester

@@ -14,6 +14,10 @@ public class User {
     private ArrayList<Mix> likedMixes= new ArrayList<Mix>();
     private String picture;
     private String name;
+
+    public User(String name){
+        this.name = name;
+    }
     
     //User constructor
     public User(String name, String picture, ArrayList<Mix> mixes, ArrayList<Mix> likedMixes){
