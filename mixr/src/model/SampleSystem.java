@@ -26,6 +26,7 @@ public class SampleSystem {
         // Mixes
         name = "Peach Bloom"; HashMap<Integer, Beverage> mixer = new HashMap<>(){{put(6, pSeltzer); put(10, sparklingWater);}}; id = 1; ArrayList<Beverage> beverages = new ArrayList<>(){{add(pSeltzer);add(sparklingWater);}}; User user = new User("Hunter"); HashMap<Double, Beverage> composition = new HashMap<>(){{put(4.0,pSeltzer);put(12.0,sparklingWater);}};
         Mix mix1 = new Mix(name, mixer, id, beverages, user, composition);
+        mix1.incrementRating();
         System.out.println(mix1);
     }
 

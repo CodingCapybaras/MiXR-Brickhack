@@ -105,9 +105,15 @@ public class Mix {
     }
 
     // Setters
+    /**
+     * Increments the likes
+     */
     public void incrementRating(){
         likes+=1;
     }
+    /**
+     * Decrements the likes
+     */
     public void decrementRating(){
         likes-=1;
     }
@@ -128,7 +134,7 @@ public class Mix {
 
     @Override
     public String toString() {
-        return String.format("Mix Name:\t%s\n\tComposition:\t%s", name, composition.toString());
+        return String.format("Mix Name:\t%s\n\tLikes:%d\n\tComposition:\t%s", name, likes, composition.toString());
     }
 
     //public void addMixToDB(beverages)
