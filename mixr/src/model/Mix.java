@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.*;
 
 //Mix class
@@ -50,6 +49,7 @@ public class Mix {
         nutrition = new NutritionInfo(totalCalories, proof, ing);
         return nutrition;
     }
+    //haven't been calculated
     public ArrayList<Integer>  getColor(){
         return color;
     }
@@ -75,6 +75,19 @@ public class Mix {
     public String getName(){
         return name;
     }
+    public int getLikes(){
+        return likes;
+    }
+    public void incrementRating(){
+        likes+=1;
+    }
+    public void decrementRating(){
+        likes-=1;
+    }
+    public void addBev(Beverage Bev){
+        beverages.add(Bev); //add Beverage to mix
+    }
+    //public void addMixToDB(beverages)
 
     //Testing Mix class
 
