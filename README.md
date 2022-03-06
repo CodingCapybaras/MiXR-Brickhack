@@ -7,7 +7,7 @@
 > 1. Clone this repository
 > 2. Add node_modules to the MiXR/MiXR directory.
 > 3. Run the command ```npm start```
-> Log in and get mixing!
+> 4. Log in and get mixing!
 
 **Resources used in Development of MiXR:**
 > Java, SQL, Figma, React, MongoDB.
