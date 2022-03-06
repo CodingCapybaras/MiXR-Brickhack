@@ -7,3 +7,6 @@
 
 **Resources used in Development of MiXR:**
 > Java, SQL, Figma, React, MongoDB.
+
+**UML for classes used in Development**
+> ![uml]https://imgur.com/a/umJ3gpp
