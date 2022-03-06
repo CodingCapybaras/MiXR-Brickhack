@@ -13,4 +13,4 @@
 > Java, SQL, Figma, React, MongoDB.
 
 **UML for classes used in Development**
-> ![uml]https://github.com/CodingCapybaras/MiXR/blob/main/diagrams/MiXR%20UML%20class%20diagram.jpeg
+> ![uml](https://github.com/CodingCapybaras/MiXR/blob/main/diagrams/MiXR%20UML%20class%20diagram.jpeg)
