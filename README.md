@@ -23,10 +23,10 @@
 > The model of our program is based around beverage and mix objects. Beverage objects are created when a beverage is obtained from the database through the Translastion.java. That beverage object can be used to make mixes of different beverages. When a mix is made, the user must specify one or more beverages that they wish to add to the mix with the relative amount. When a user creates a mix, a method called Translation.addMix(HashMap<int percent, Beverage>, int userID) will be added to the database. The mixes can be retrieved when a user is scrolling through a feed of mixes, or when a user views another users mixes.
 > ![uml](https://github.com/CodingCapybaras/MiXR/blob/main/diagrams/MiXR%20UML%20class%20diagram.jpeg)
 
-### Inspiration
+## Inspiration
 We decided to make something fun that involve users interacting with beverages and experimenting to get a beverage perfect for them! So wanted to make a fun program that would attract user involvement with beverages they love to enjoy.
 
-### What it does
+## What it does
 MiXR is a program that allows users to become their own bartender and experiment with mixing drinks while giving them more in-depth information than they would get by just mixing drinks randomly. They can also estimate the cost of how much it would cost to mix their custom drinks as well as share and save drinks made by them and others through a social page.
 
 ## Accomplishments that we're proud of
