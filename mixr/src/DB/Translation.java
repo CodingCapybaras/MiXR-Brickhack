@@ -9,6 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import model.Beverage;
+import model.Mix;
 import model.NutritionInfo;
 
 /**
@@ -62,5 +63,12 @@ public class Translation {
         
         // Return null if the beverage is not valid
         return null;
+    }
+
+    /**
+     * Add a mix to the database
+     * @param mix
+     */
+    public static void addMix(Mix mix){
     }
 }
