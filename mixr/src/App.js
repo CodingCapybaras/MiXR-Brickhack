@@ -16,27 +16,13 @@ import fourteen from './graphics/Additive Drink Layers/14.svg';
 import fifteen from './graphics/Additive Drink Layers/15.svg';
 import Button from './Search';
 import Search from './Search';
+import mixerPage from './graphics/Mixer Page.svg'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <div className="split left"> 
-        <div className="top">
-          Mixer 
-        </div>
-        <div className="bottom">
-          <div className="middle">
-            <img src={fifteen} className="mixer-component" alt="logo" />
-          </div>
-        </div>
-    
-      </div>
-      <div className="split right"> 
-        Search 
-        <Search></Search>
-      </div>
-        
+        <img src={mixerPage} className="mixer-page" alt="logo" />  
       </header>
       
     </div>
