@@ -2,6 +2,11 @@ package model;
 
 import java.util.ArrayList;
 
+/**
+ * The class representation of nutrition.
+ * @author Param
+ */
+
 //NutritionInfo class
 public class NutritionInfo {
 

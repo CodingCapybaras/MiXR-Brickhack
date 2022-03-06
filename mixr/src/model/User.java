@@ -1,6 +1,12 @@
 package model;
 
 import java.util.ArrayList;
+
+/**
+ * The class representation of a user.
+ * @author Param
+ */
+
 //user class
 public class User {
     //User attributes
@@ -46,7 +52,5 @@ public class User {
     public ArrayList<Mix> getListOfLikedMixes(){
         return likedMixes;
     } 
-    
-    
 
 }

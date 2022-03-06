@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.*;
 
+/**
+ * The class representation of a mix of one or more beverages.
+ * @author Param
+ */
+
 //Mix class
 public class Mix {
 
@@ -16,15 +21,22 @@ public class Mix {
 
     //need to calculate with Arraybeverages 
     private double proof;
-    private double totalCost =0;
-    private ArrayList color;
+    private double totalCost = 0;
+    private ArrayList<Integer> color;
     private NutritionInfo nutrition;
     private int likes; //rating
     private double totalAlcohol=0;
     private double totalSize=0;
 
 
-    //Mix constructor 
+    /**
+     * The constructor for a mix with a name, the mixer image, beverages, user.
+     * @param name
+     * @param mixer
+     * @param id
+     * @param beverages
+     * @param user
+     */
     public Mix(String name, HashMap<Integer, String> mixer, int id, ArrayList<Beverage> beverages, User user){
         this.name = name;
         this.mixer=mixer;
@@ -65,7 +77,7 @@ public class Mix {
         return nutrition;
     }
     //haven't been calculated
-    public ArrayList<Integer>  getColor(){
+    public ArrayList<Integer> getColor(){
         return color;
     }
     //caclulating alcohol percentage
@@ -89,12 +101,19 @@ public class Mix {
     public int getLikes(){
         return likes;
     }
+
+    // Setters
     public void incrementRating(){
         likes+=1;
     }
     public void decrementRating(){
         likes-=1;
     }
+
+    /**
+     * Adds a beverage to the mix.
+     * @param bev
+     */
     public void addBev(Beverage bev){
         //have to recalc mix after adding bev
         beverages.add(bev); //add Beverage to mix

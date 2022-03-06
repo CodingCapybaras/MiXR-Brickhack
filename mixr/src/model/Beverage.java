@@ -1,8 +1,12 @@
 package model;
 
-
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * The class representation of a beverage.
+ * @author Param
+ */
 
 //Beverage class
 public class Beverage {
@@ -15,10 +19,23 @@ public class Beverage {
     private ArrayList color;
     private NutritionInfo nutrition;
 
+    /**
+     * Constructor used to get a beverage from the database given the id.
+     * @param id
+     */
     public Beverage(int id){
         this.id=id;
     }
-    //Beverage constructor 
+    
+    /**
+     * The beverage constructor that is used to make a new beverage.
+     * @param name
+     * @param id
+     * @param cost
+     * @param size
+     * @param color
+     * @param nutrition
+     */
     public Beverage(String name, int id, double cost, double size, ArrayList<Integer> color, NutritionInfo nutrition){
         this.name = name;
         this.id = id;
@@ -31,14 +48,17 @@ public class Beverage {
 
     //getter methods
     public NutritionInfo getNutrition() {
-    return nutrition;
+        return nutrition;
     }
+
     public ArrayList<Integer>  getColor(){
-    return color;
+        return color;
     }
+
     public double getCost() {
-    return cost;
+        return cost;
     }
+
     public double getSize(){
         return size;
     }
