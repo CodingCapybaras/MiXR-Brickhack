@@ -1,3 +1,4 @@
+![MiXR logo](https://github.com/CodingCapybaras/MiXR/blob/main/diagrams/MiXR%20Logo%20(White).jpeg)
 # MiXR
 **About MiXR:**
 > MiXR is an application that promotes a space for sharing love of alcoholic beverages and the mixing of these beverages.
